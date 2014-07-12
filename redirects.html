@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Solutionfactory.github.io : " />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Redirects - Solutionfactory.github.io</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/SolutionFactory">View on GitHub</a>
+
+          <h1 id="project_title"><a href="/">Solutionfactory.github.io</a></h1>
+          <h2 id="project_tagline"></h2>
+
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+<h1 id="redirects">Redirects</h1>
+
+<p>Easily setup redirects for your WordPress site.</p>
+
+<h2 id="usage">Usage</h2>
+
+<p>After activating the plugin go to the plugin’s settings page:</p>
+
+<p><img src="/images/redirects-settings-menu.png" alt="Settings menu" /></p>
+
+<p>Click on the “Add new” button to create a new redirect rule.</p>
+
+<p>After adding a new redirect rule an empty rule is added to the table. Each rule has 6 columns: active, pattern, from, to, type and remove.</p>
+
+<h3 id="active">Active</h3>
+
+<p>Check to make the rule active, meaning it will be used when trying to rewrite requests</p>
+
+<h3 id="pattern">Pattern</h3>
+
+<p>The pattern describe in what way we want to match the original URL. There are four different possible patterns to choose from: Starts with, Ends with, Equals and Regex.</p>
+
+<p><img src="/images/redirects-settings-page.png" alt="Settings page" /></p>
+
+<p><strong>Starts with</strong></p>
+
+<p>If the originating URL starts with the following string it will match and be redirected, e.g.:</p>
+
+<pre><code>http://yourdomain.com/this/is/the/old/url
+</code></pre>
+
+<p>In the above example if we use the “Starts with” pattern and use <code>/this/is</code> as the “From” URL it will match the request and the page will be redirected. We could have also used for example: <code>/this</code>, <code>/th</code>, <code>/this/is/the/old</code> or any string which is at the start of our URL.</p>
+
+<p><strong>Ends with</strong></p>
+
+<p>If the originating URL ends with the following string it will match and be redirected, e.g.:</p>
+
+<pre><code>http://yourdomain.com/this/is/the/old/url
+</code></pre>
+
+<p>In the above example if we use the “Ends with” pattern and use <code>/url</code> as the “From” URL it will match the request and the page will be redirected. We could have also used for example: <code>url</code>, `/old/url or any string which is at the end of our URL.</p>
+
+<p><strong>Equals</strong></p>
+
+<p>This pattern will only match when the path (e.g. <code>/this/is/the/old/url</code>) <em>exactly</em> matches the current URL. This means that the following URL will match:</p>
+
+<pre><code>http://yourdomain.com/this/is/the/old/url
+</code></pre>
+
+<p>But these don’t:</p>
+
+<pre><code>http://yourdomain.com/xthis/is/the/old/url
+http://yourdomain.com/this/is/the/old/urlx
+http://yourdomain.com/completely-different
+</code></pre>
+
+<p><strong>Regex</strong></p>
+
+<p>This pattern allows you to match URLs based on PCRE regex patterns. The actual regex pattern should always include delimiters, because behind the scenes the pattern is used in PHP’s <a href="http://php.net/manual/en/function.preg-match.php"><code>preg_match</code></a> function.</p>
+
+<h3 id="from">From</h3>
+
+<p>The original URL to be redirected. Note that these URLs should only contain relative paths (with the protocol and domainname) e.g.:</p>
+
+<pre><code>/some/path/file.html
+</code></pre>
+
+<h3 id="to">To</h3>
+
+<p>The URL to redirect to.</p>
+
+<h3 id="type">Type</h3>
+
+<p>The type of the redirect. Usually this will either be a <code>301</code> (Moved permanently) or a <code>302</code> (Temporary redirect) redirect.</p>
+
+<p><em>Note: the often used 302 redirect has been superseded by 303 and 307 redirects.</em></p>
+
+<p>For more information see the <a href="http://en.wikipedia.org/wiki/URL_redirection">Wikipedia page</a> about URL redirection.</p>
+
+<h3 id="remove">Remove</h3>
+
+<p>Click this link to completely remove a redirect rule</p>
+
+<h2 id="sorting">Sorting</h2>
+
+<p>To sort the redirect rules simply drag and drop a rule and click “Save Changes”.</p>
+
+<p><img src="/images/redirects-settings-page-sort.png" alt="Sorting" /></p>
+
+<h2 id="filtering">Filtering</h2>
+
+<p>To filter the list of redirect rules (useful when you have a lot of rules and you want to find specific ones) simply enter a string you want to filter on and click “Filter”. The list of redirect rules will be filtered to only show the rules which containing the text you entered in the filter. The filter will filter based on the “From” and “To” fields. If any of those two fields contain your filter text the rule will not be filtered out.</p>
+
+<p><img src="/images/redirects-settings-page-filter.png" alt="Filtering" /></p>
+
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+
+
+  </body>
+</html>
